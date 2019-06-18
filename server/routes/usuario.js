@@ -34,11 +34,11 @@ app.get('/usuario', verificaToken, (req, res) => {
 });
 
 app.post('/usuario', [verificaToken, verificaAdmin_Role], (req, res) => {
-    return res.json({
-        usuario: req.usuario,
-        nombre: req.usuario.nombre,
-        email: req.usuario.email
-    })
+    /*   return res.json({
+           usuario: req.usuario,
+           nombre: req.usuario.nombre,
+           email: req.usuario.email
+       })*/
     let body = req.body;
 
     let usuario = new Usuario({
